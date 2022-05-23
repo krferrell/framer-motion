@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import PureCss from './PureCss/PureCss';
 
 function App() {
-  return (
+  return (  
     <div className="App">
-      
+      <PureCss/>
     </div>
   );
 }
