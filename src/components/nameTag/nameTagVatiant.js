@@ -1,4 +1,4 @@
-export const variant = {
+export const nameTagVariant = {
   hidden: { opacity: 0 },
   visible: (custom) => ({
     opacity: 1,
