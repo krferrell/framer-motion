@@ -1,7 +1,8 @@
 import React from "react";
+import Box from "../../hover/Hover";
 
 const Home = () => {
-  return <h1>Hello! Welcome to a Framer Motion Demo</h1>;
+  return <div><Box/></div>;
 };
 
 export default Home;
