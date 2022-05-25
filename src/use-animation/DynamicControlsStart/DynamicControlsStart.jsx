@@ -86,7 +86,7 @@ const NonDynamicControlsStart = () => {
 const listItemVariants2 = {
   hidden: {
     opacity: 0,
-    x: -10,
+    x: -100,
   },
 };
 
@@ -95,28 +95,32 @@ const DynamicControlsStart = () => {
 
   // Run animation once the page loads (hence the empty depedency `[]`).
   useEffect(() => {
-    controls.start((custom) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: 'spring',
-        bounce: 0.4,
-        duration: 0.5,
-        delay: custom * 0.1,
-      },
-    }));
+    const timer = setTimeout(() => {
+      controls.start((custom) => ({
+        opacity: 1,
+        x: 0,
+        transition: {
+          type: 'spring',
+          bounce: 0.4,
+          duration: 2,
+          delay: custom * 0.1,
+        },
+      }));
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <Container>
-      <List>
+      {/* <List> */}
         <ListItem
           animate={controls}
           custom={0}
           initial="hidden"
           variants={listItemVariants2}
         >
-          The Dark Knight
+          {/* The Dark Knight */}
         </ListItem>
 
         <ListItem
@@ -125,7 +129,7 @@ const DynamicControlsStart = () => {
           initial="hidden"
           variants={listItemVariants2}
         >
-          Children of Men
+          {/* Children of Men */}
         </ListItem>
 
         <ListItem
@@ -134,7 +138,7 @@ const DynamicControlsStart = () => {
           initial="hidden"
           variants={listItemVariants2}
         >
-          Everything Everywhere All At Once
+          {/* Everything Everywhere All At Once */}
         </ListItem>
 
         <ListItem
@@ -143,7 +147,7 @@ const DynamicControlsStart = () => {
           initial="hidden"
           variants={listItemVariants2}
         >
-          Dune
+          {/* Dune */}
         </ListItem>
 
         <ListItem
@@ -152,9 +156,9 @@ const DynamicControlsStart = () => {
           initial="hidden"
           variants={listItemVariants2}
         >
-          The Godfather
+          {/* The Godfather */}
         </ListItem>
-      </List>
+      {/* </List> */}
     </Container>
   );
 }

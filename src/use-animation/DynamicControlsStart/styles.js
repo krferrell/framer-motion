@@ -3,9 +3,12 @@ import { motion } from "framer-motion";
 
 export const Container = styled.section`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-width: 100vw;
+  width: 100vw;
   min-height: 100vh;
+  background: #c7e8f3;
 `;
 
 export const List = styled.ul`
@@ -13,6 +16,14 @@ export const List = styled.ul`
   margin-left: auto;
 `;
 
-export const ListItem = styled(motion.li)`
-  list-style: none;
+export const ListItem = styled(motion.div)`
+  // list-style: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #8e4162;
+
+  :not(:last-child) {
+    margin-bottom: 20px;
+  }
 `;

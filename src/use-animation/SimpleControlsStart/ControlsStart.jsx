@@ -10,7 +10,7 @@ import { Container, Image, ImageWrapper } from './styles';
 const wrapperVariants1 = {
   hidden: {
     opacity: 0,
-    y: -150,
+    y: -300,
   },
 };
 
@@ -25,7 +25,7 @@ const PassObjectInComponent = () => {
       transition: {
         type: "spring",
         bounce: 0.4,
-        duration: 0.5,
+        duration: 2,
       },
     });
   }, []);
@@ -38,7 +38,7 @@ const PassObjectInComponent = () => {
         initial="hidden"
         variants={wrapperVariants1}
       >
-        <Image src={reactoadImg} alt="Reactoad" />
+        {/* <Image src={reactoadImg} alt="Reactoad" /> */}
       </ImageWrapper>
     </Container>
   );
@@ -61,7 +61,7 @@ const wrapperVariants2 = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.5,
+      duration: 2,
     },
   },
 };
@@ -71,7 +71,9 @@ const ActivateNamedVariantFromComponent = () => {
 
   // Run animation once the page loads (hence the empty depedency `[]`).
   useEffect(() => {
-    controls.start('visible');
+    // controls.start('visible');
+
+    const timer = setTimeout(() => { controls.start('visible'); }, 1000); return () => clearTimeout(timer);
   }, []);
 
 
@@ -82,7 +84,7 @@ const ActivateNamedVariantFromComponent = () => {
         initial="hidden"
         variants={wrapperVariants2}
       >
-        <Image src={reactoadImg} alt="Reactoad" />
+        {/* <Image src={reactoadImg} alt="Reactoad" /> */}
       </ImageWrapper>
     </Container>
   );
