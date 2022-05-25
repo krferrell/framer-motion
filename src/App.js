@@ -1,10 +1,18 @@
-import './App.css';
-import PureCss from './PureCss/PureCss';
+import "./App.css";
+import { Home, StyledCompEx } from "./pages";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Nav } from "./components";
 
 function App() {
-  return (  
+  const location = useLocation();
+
+  return (
     <div className="App">
-      <PureCss/>
+      <Nav />
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" exact="exact" element={<Home />} />
+        <Route path="/styled" exact="exact" element={<StyledCompEx />} />
+      </Routes>
     </div>
   );
 }
