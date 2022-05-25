@@ -3,7 +3,7 @@ import { useAnimation } from 'framer-motion';
 
 import reactoadImg from './reactoad.png';
 
-import { Image, ImageWrapper } from './styles';
+import { Container, Image, ImageWrapper } from './styles';
 
 // FOR PASSING AN OBJECT VARIANT INTO A COMPONENT:
 
@@ -32,13 +32,15 @@ const PassObjectInComponent = () => {
 
 
   return (
-    <ImageWrapper
-      animate={controls}
-      initial="hidden"
-      variants={wrapperVariants1}
-    >
-      <Image src={reactoadImg} alt="Reactoad" />
-    </ImageWrapper>
+    <Container>
+      <ImageWrapper
+        animate={controls}
+        initial="hidden"
+        variants={wrapperVariants1}
+      >
+        <Image src={reactoadImg} alt="Reactoad" />
+      </ImageWrapper>
+    </Container>
   );
 };
 
@@ -74,13 +76,15 @@ const ActivateNamedVariantFromComponent = () => {
 
 
   return (
-    <ImageWrapper
-      animate={controls}
-      initial="hidden"
-      variants={wrapperVariants2}
-    >
-      <Image src={reactoadImg} alt="Reactoad" />
-    </ImageWrapper>
+    <Container>
+      <ImageWrapper
+        animate={controls}
+        initial="hidden"
+        variants={wrapperVariants2}
+      >
+        <Image src={reactoadImg} alt="Reactoad" />
+      </ImageWrapper>
+    </Container>
   );
 };
 
