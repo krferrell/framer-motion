@@ -1,30 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { data } from "./utils/data";
-import NameTag from "./nameTag/NameTag";
-import { MotionComponent } from "./customComponent/CustomComp";
-import { variant } from "./nameTag/variantNT";
+import { Home, StyledCompEx } from "./pages";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Nav } from "./components";
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="App">
-      <div>
-        {data.map((name, index) => (
-          <NameTag index={index} key={name.name} name={name.name} />
-        ))}
-      </div>
-      <div>
-        {data.map((name, index) => (
-          <MotionComponent
-            custom={index}
-            index={index}
-            key={name.name}
-            variants={variant}
-            initial="hidden"
-            animate="visible"
-          />
-        ))}
-      </div>
+      <Nav />
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" exact="exact" element={<Home />} />
+        <Route path="/styled" exact="exact" element={<StyledCompEx />} />
+      </Routes>
     </div>
   );
 }
