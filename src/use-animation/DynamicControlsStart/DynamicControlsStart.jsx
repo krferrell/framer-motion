@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAnimation } from 'framer-motion';
 
-import { List, ListItem } from './styles';
+import { Container, List, ListItem } from './styles';
 
 // FOR USING `controls.start` NON-DYNAMICALLY:
 
@@ -31,47 +31,49 @@ const NonDynamicControlsStart = () => {
   }, []);
 
   return (
-    <List>
-      <ListItem
-        animate={controls}
-        initial="hidden"
-        variants={listItemVariants1}
-      >
-        The Dark Knight
-      </ListItem>
+    <Container>
+      <List>
+        <ListItem
+          animate={controls}
+          initial="hidden"
+          variants={listItemVariants1}
+        >
+          The Dark Knight
+        </ListItem>
 
-      <ListItem
-        animate={controls}
-        initial="hidden"
-        variants={listItemVariants1}
-      >
-        Children of Men
-      </ListItem>
+        <ListItem
+          animate={controls}
+          initial="hidden"
+          variants={listItemVariants1}
+        >
+          Children of Men
+        </ListItem>
 
-      <ListItem
-        animate={controls}
-        initial="hidden"
-        variants={listItemVariants1}
-      >
-        Everything Everywhere All At Once
-      </ListItem>
+        <ListItem
+          animate={controls}
+          initial="hidden"
+          variants={listItemVariants1}
+        >
+          Everything Everywhere All At Once
+        </ListItem>
 
-      <ListItem
-        animate={controls}
-        initial="hidden"
-        variants={listItemVariants1}
-      >
-        Dune
-      </ListItem>
+        <ListItem
+          animate={controls}
+          initial="hidden"
+          variants={listItemVariants1}
+        >
+          Dune
+        </ListItem>
 
-      <ListItem
-        animate={controls}
-        initial="hidden"
-        variants={listItemVariants1}
-      >
-        The Godfather
-      </ListItem>
-    </List>
+        <ListItem
+          animate={controls}
+          initial="hidden"
+          variants={listItemVariants1}
+        >
+          The Godfather
+        </ListItem>
+      </List>
+    </Container>
   );
 };
 
@@ -106,52 +108,54 @@ const DynamicControlsStart = () => {
   }, []);
 
   return (
-    <List>
-      <ListItem
-        animate={controls}
-        custom={0}
-        initial="hidden"
-        variants={listItemVariants2}
-      >
-        The Dark Knight
-      </ListItem>
+    <Container>
+      <List>
+        <ListItem
+          animate={controls}
+          custom={0}
+          initial="hidden"
+          variants={listItemVariants2}
+        >
+          The Dark Knight
+        </ListItem>
 
-      <ListItem
-        animate={controls}
-        custom={1}
-        initial="hidden"
-        variants={listItemVariants2}
-      >
-        Children of Men
-      </ListItem>
+        <ListItem
+          animate={controls}
+          custom={1}
+          initial="hidden"
+          variants={listItemVariants2}
+        >
+          Children of Men
+        </ListItem>
 
-      <ListItem
-        animate={controls}
-        custom={2}
-        initial="hidden"
-        variants={listItemVariants2}
-      >
-        Everything Everywhere All At Once
-      </ListItem>
+        <ListItem
+          animate={controls}
+          custom={2}
+          initial="hidden"
+          variants={listItemVariants2}
+        >
+          Everything Everywhere All At Once
+        </ListItem>
 
-      <ListItem
-        animate={controls}
-        custom={3}
-        initial="hidden"
-        variants={listItemVariants2}
-      >
-        Dune
-      </ListItem>
+        <ListItem
+          animate={controls}
+          custom={3}
+          initial="hidden"
+          variants={listItemVariants2}
+        >
+          Dune
+        </ListItem>
 
-      <ListItem
-        animate={controls}
-        custom={4}
-        initial="hidden"
-        variants={listItemVariants2}
-      >
-        The Godfather
-      </ListItem>
-    </List>
+        <ListItem
+          animate={controls}
+          custom={4}
+          initial="hidden"
+          variants={listItemVariants2}
+        >
+          The Godfather
+        </ListItem>
+      </List>
+    </Container>
   );
 }
 
