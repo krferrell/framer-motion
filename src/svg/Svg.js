@@ -4,16 +4,13 @@ import styled from 'styled-components'
 
 const draw = {
   hidden: { pathLength: 0, opacity: 0 },
-  visible: (i) => {
-    const delay = 1 + i * 0.5;
-    return {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
-        opacity: { delay, duration: 0.01 }
-      }
-    };
+  visible: {
+    pathLength: 1,
+    opacity: 1,
+    transition: {
+      pathLength: { delay: 1, type: "spring", duration: 1.5, bounce: 0 },
+      opacity: { delay: 1, duration: 0.01 }
+    }
   }
 };
 
@@ -32,7 +29,6 @@ const Svg = () => {
         r="80"
         stroke="#ff0055"
         variants={draw}
-        custom={1}
       />
       <motion.line
         x1="220"
@@ -41,7 +37,6 @@ const Svg = () => {
         y2="170"
         stroke="#00cc88"
         variants={draw}
-        custom={2}
       />
       <motion.line
         x1="220"
@@ -50,7 +45,6 @@ const Svg = () => {
         y2="30"
         stroke="#00cc88"
         variants={draw}
-        custom={2.5}
       />
       <motion.rect
         width="140"
@@ -60,7 +54,6 @@ const Svg = () => {
         rx="20"
         stroke="#0099ff"
         variants={draw}
-        custom={3}
       />
     </SvgContainer>
   );
