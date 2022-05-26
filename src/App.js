@@ -9,10 +9,10 @@ function App() {
 
   return (
     <div className="App">
-      <Nav />
+      {/* <Nav /> */}
       <Routes location={location} key={location.pathname}>
-        <Route path="/" exact="exact" element={<Home />} />
-        <Route path="/styled" exact="exact" element={<StyledCompEx />} />
+        {/* <Route path="/" exact="exact" element={<Home />} />
+        <Route path="/styled" exact="exact" element={<StyledCompEx />} /> */}
         <Route path="/svg" exact="exact" element={<Svg />} />
       </Routes>
     </div>
