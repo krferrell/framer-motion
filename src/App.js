@@ -6,10 +6,7 @@ import {
   PassObjectInComponent,
   ActivateNamedVariantFromComponent,
 } from "./use-animation/SimpleControlsStart";
-import {
-  DynamicControlsStart,
-  NonDynamicControlsStart,
-} from "./use-animation/DynamicControlsStart";
+import { Dynamic, NonDynamic } from "./use-animation/DynamicControls";
 
 function App() {
   const location = useLocation();
@@ -23,7 +20,7 @@ function App() {
       </Routes> */}
       {/* <PassObjectInComponent/> */}
       {/* <ActivateNamedVariantFromComponent /> */}
-      <DynamicControlsStart/>
+      <Dynamic />
     </div>
   );
 }
