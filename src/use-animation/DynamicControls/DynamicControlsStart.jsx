@@ -95,20 +95,16 @@ const DynamicControlsStart = () => {
 
   // Run animation once the page loads (hence the empty depedency `[]`).
   useEffect(() => {
-    const timer = setTimeout(() => {
-      controls.start((custom) => ({
-        opacity: 1,
-        x: 0,
-        transition: {
-          type: 'spring',
-          bounce: 0.4,
-          duration: 2,
-          delay: custom * 0.1,
-        },
-      }));
-    }, 1000);
-
-    return () => clearTimeout(timer);
+    controls.start((custom) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+        duration: 2,
+        delay: custom * 0.1,
+      },
+    }));
   }, []);
 
   return (
