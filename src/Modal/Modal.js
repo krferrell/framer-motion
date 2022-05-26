@@ -5,25 +5,40 @@ import { AnimatePresence, motion } from "framer-motion";
 // -----------------Variants for Modal Animations
 
 const modalAnimation = {
-  initial: { y: "-100vh", opacity: 0 },
+  initial: { opacity: 0 },
   animate: {
-    x: 0,
-    y: 0,
     opacity: 1,
-    transition: { delay: 0.2, duration: 0.3, ease: "easeIn" },
+    transition: { delay: 1, duration: 0.7, ease: "easeIn" },
   },
-  exit: { y: "-100vh", opacity: 1, transition: { duration: 0.2 } },
+  exit: {opacity: 0, transition: { duration: 0.7, delay: 0.5 } },
 };
 
 const overlayAnimation = {
-  initial: { y: "-100vh", opacity: 0 },
+  initial: { y: "100vh" },
   animate: {
     y: 0,
-    opacity: 1,
-    transition: { duration: 0.3 },
+    transition: { duration: 1.2 },
   },
-  exit: { y: "-100vh", opacity: 1, transition: { duration: 0.2, delay: 0.25 } },
+  exit: { y: "100vh", opacity: 1, transition: { duration: 1.2, delay: 1.2} },
 };
+
+const closeVariant = {
+  initial: {
+    y: "200%",
+  },
+  animate: {
+    y: 0,
+    transition: {
+      delay: 1.7,
+      duration: 0.7,
+      type: 'spring',
+      stiffness: 90,
+    }
+  },
+  exit: {y: "200%", transition: {
+    duration: 0.7,
+  }}
+}
 
 const Modal = () => {
   const [active, setActive] = useState(false);
@@ -31,23 +46,20 @@ const Modal = () => {
   const clickHandler = () => {
     setActive(!active);
   };
-
   return (
     <ModalContainer>
-      <ModalButton onClick={() => setActive(true)}>
-        Open Modal
-      </ModalButton>
+      <ModalButton onClick={() => setActive(true)}>CLICK ME</ModalButton>
       <AnimatePresence>
         {active && (
           <Overlay key="modal" {...overlayAnimation}>
             <ModalSample key="modal" {...modalAnimation}>
-              Welcome to Reactoad Framer Motion Presentation
               <Close
+                {...closeVariant} 
                 onClick={() => {
                   clickHandler();
                 }}
               >
-                close
+                CLOSE MODAL
               </Close>
             </ModalSample>
           </Overlay>
@@ -67,6 +79,7 @@ const ModalContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #cde7f1;
 `;
 
 const Overlay = styled(motion.div)`
@@ -79,26 +92,27 @@ const Overlay = styled(motion.div)`
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.5));
+  background: #8a3a64;
 `;
 
-const ModalButton = styled(motion.button)`
-  width: 200px;
-  height: 200px;
-  background-color: #1a1a1a;
+const ModalButton = styled(motion.div)`
+  width: 150px;
+  height: 150px;
+  background: #8a3a64;
+  border-radius: 50%;
   color: #fff;
-  border-radius: 10px;
-  font-size: 40px;
+  font-size: 18px;
   cursor: pointer;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ModalSample = styled(motion.div)`
-  background-color: #1a1a1a;
-  width: 70%;
-  height: 80%;
-  max-width: 1400px;
-  max-height: 800px;
+  background: #cde7f1;
+  width: 500px;
+  height: 350px;
   border-radius: 10px;
   position: relative;
   color: #edf5e1;
@@ -107,20 +121,21 @@ const ModalSample = styled(motion.div)`
   justify-content: center;
   font-size: 50px;
   user-select: none;
+  text-align: center;
+  overflow: hidden;
 `;
 
-const Close = styled.div`
+const Close = styled(motion.div)`
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #8a3a64;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 5px;
-  margin-right: 25px;
   z-index: 100;
-  font-size: 25px;
   user-select: none;
-  letter-spacing: 3px;
+  font-size: 18px;
+
 `;
