@@ -5,52 +5,7 @@ import reactoadImg from './reactoad.png';
 
 import { Container, Image, ImageWrapper } from './styles';
 
-// FOR PASSING AN OBJECT VARIANT INTO A COMPONENT:
-
-const wrapperVariants1 = {
-  hidden: {
-    opacity: 0,
-    y: -300,
-  },
-};
-
-const PassObjectInComponent = () => {
-  const controls = useAnimation();
-
-  // Run animation once the page loads (hence the empty depedency `[]`).
-  useEffect(() => {
-    controls.start({
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 2,
-      },
-    });
-  }, []);
-
-
-  return (
-    <Container>
-      <ImageWrapper
-        animate={controls}
-        initial="hidden"
-        variants={wrapperVariants1}
-      >
-        {/* <Image src={reactoadImg} alt="Reactoad" /> */}
-      </ImageWrapper>
-    </Container>
-  );
-};
-
-// ----------------------------------------------
-// ----------------------------------------------
-// ----------------------------------------------
-
-// FOR ACTIVATING A NAMED VARIANT FROM COMPONENT:
-
-const wrapperVariants2 = {
+const wrapperVariants = {
   hidden: {
     opacity: 0,
     y: -150,
@@ -66,14 +21,12 @@ const wrapperVariants2 = {
   },
 };
 
-const ActivateNamedVariantFromComponent = () => {
+const SimpleControls = () => {
   const controls = useAnimation();
 
   // Run animation once the page loads (hence the empty depedency `[]`).
   useEffect(() => {
-    // controls.start('visible');
-
-    const timer = setTimeout(() => { controls.start('visible'); }, 1000); return () => clearTimeout(timer);
+    controls.start('visible');
   }, []);
 
 
@@ -82,7 +35,7 @@ const ActivateNamedVariantFromComponent = () => {
       <ImageWrapper
         animate={controls}
         initial="hidden"
-        variants={wrapperVariants2}
+        variants={wrapperVariants}
       >
         {/* <Image src={reactoadImg} alt="Reactoad" /> */}
       </ImageWrapper>
@@ -90,7 +43,4 @@ const ActivateNamedVariantFromComponent = () => {
   );
 };
 
-export {
-  ActivateNamedVariantFromComponent,
-  PassObjectInComponent,
-};
+export default SimpleControls;
