@@ -3,94 +3,18 @@ import { useAnimation } from 'framer-motion';
 
 import { Container, List, ListItem } from './styles';
 
-// FOR USING `controls.start` NON-DYNAMICALLY:
-
-const listItemVariants1 = {
-  hidden: {
-    opacity: 0,
-    x: -10,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      type: 'spring',
-      bounce: 0.4,
-      duration: 0.5,
-      delay: 0.1,
-    },
-  },
-};
-
-const NonDynamicControlsStart = () => {
-  const controls = useAnimation();
-
-  // Run animation once the page loads (hence the empty depedency `[]`).
-  useEffect(() => {
-    controls.start('visible');
-  }, []);
-
-  return (
-    <Container>
-      <List>
-        <ListItem
-          animate={controls}
-          initial="hidden"
-          variants={listItemVariants1}
-        >
-          The Dark Knight
-        </ListItem>
-
-        <ListItem
-          animate={controls}
-          initial="hidden"
-          variants={listItemVariants1}
-        >
-          Children of Men
-        </ListItem>
-
-        <ListItem
-          animate={controls}
-          initial="hidden"
-          variants={listItemVariants1}
-        >
-          Everything Everywhere All At Once
-        </ListItem>
-
-        <ListItem
-          animate={controls}
-          initial="hidden"
-          variants={listItemVariants1}
-        >
-          Dune
-        </ListItem>
-
-        <ListItem
-          animate={controls}
-          initial="hidden"
-          variants={listItemVariants1}
-        >
-          The Godfather
-        </ListItem>
-      </List>
-    </Container>
-  );
-};
-
-// ----------------------------------------------
-// ----------------------------------------------
-// ----------------------------------------------
-
-// FOR USING `controls.start` DYNAMICALLY:
-
-const listItemVariants2 = {
+const listItemVariants = {
   hidden: {
     opacity: 0,
     x: -100,
   },
 };
 
-const DynamicControlsStart = () => {
+/**
+ * 
+ * For using `controls.start` dynamically.
+ */
+const Dynamic = () => {
   const controls = useAnimation();
 
   // Run animation once the page loads (hence the empty depedency `[]`).
@@ -114,7 +38,7 @@ const DynamicControlsStart = () => {
           animate={controls}
           custom={0}
           initial="hidden"
-          variants={listItemVariants2}
+          variants={listItemVariants}
         >
           {/* The Dark Knight */}
         </ListItem>
@@ -123,7 +47,7 @@ const DynamicControlsStart = () => {
           animate={controls}
           custom={1}
           initial="hidden"
-          variants={listItemVariants2}
+          variants={listItemVariants}
         >
           {/* Children of Men */}
         </ListItem>
@@ -132,7 +56,7 @@ const DynamicControlsStart = () => {
           animate={controls}
           custom={2}
           initial="hidden"
-          variants={listItemVariants2}
+          variants={listItemVariants}
         >
           {/* Everything Everywhere All At Once */}
         </ListItem>
@@ -141,7 +65,7 @@ const DynamicControlsStart = () => {
           animate={controls}
           custom={3}
           initial="hidden"
-          variants={listItemVariants2}
+          variants={listItemVariants}
         >
           {/* Dune */}
         </ListItem>
@@ -150,7 +74,7 @@ const DynamicControlsStart = () => {
           animate={controls}
           custom={4}
           initial="hidden"
-          variants={listItemVariants2}
+          variants={listItemVariants}
         >
           {/* The Godfather */}
         </ListItem>
@@ -159,4 +83,4 @@ const DynamicControlsStart = () => {
   );
 }
 
-export { DynamicControlsStart, NonDynamicControlsStart };
+export default Dynamic;
