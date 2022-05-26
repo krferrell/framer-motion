@@ -12,6 +12,9 @@ const Nav = () => {
       <Link to="styled" exact>
         <span>Styled Component Example</span>
       </Link>
+      <Link to="/modal" exact>
+        <span>Modal</span>
+      </Link>
     </NavBar>
   );
 };
@@ -31,5 +34,3 @@ const NavBar = styled.div`
     margin: 10px 40px;
   }
 `;
-
-
