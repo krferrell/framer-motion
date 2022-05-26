@@ -12,6 +12,10 @@ const Nav = () => {
       <Link to="styled" exact>
         <span>Styled Component Example</span>
       </Link>
+
+      <Link to="hovers" exact>
+        <span>Hovers</span>
+      </Link>
     </NavBar>
   );
 };
