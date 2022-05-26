@@ -2,10 +2,7 @@ import "./App.css";
 import { Home, StyledCompEx } from "./pages";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Nav } from "./components";
-import {
-  PassObjectInComponent,
-  ActivateNamedVariantFromComponent,
-} from "./use-animation/SimpleControlsStart";
+import SimpleControls from "./use-animation/SimpleControls";
 import { Dynamic, NonDynamic } from "./use-animation/DynamicControls";
 
 function App() {
@@ -18,8 +15,7 @@ function App() {
         <Route path="/" exact="exact" element={<Home />} />
         <Route path="/styled" exact="exact" element={<StyledCompEx />} />
       </Routes> */}
-      {/* <PassObjectInComponent/> */}
-      {/* <ActivateNamedVariantFromComponent /> */}
+      {/* <SimpleControls /> */}
       <Dynamic />
     </div>
   );
