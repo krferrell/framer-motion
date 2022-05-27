@@ -1,7 +1,10 @@
+import Svg from "./SVG/SVG"
+import { svgString } from "./SVG/svgString"
+
 const animations = [
     {
-        name: `animation name goes here`,
-        component: `component goes here`,
-        codeblockString: `codeblock string goes here`,
+        name: `SVG`,
+        component: Svg,
+        codeblockString: svgString,
     },
 ]
