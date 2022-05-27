@@ -1,21 +1,11 @@
 import "./App.css";
-import { Home, Hovers, StyledCompEx } from "./pages";
-import { Route, Routes, useLocation } from "react-router-dom";
-import { Nav } from "./components";
-import SimpleControls from "./use-animation/SimpleControls";
-import { Dynamic, NonDynamic } from "./use-animation/DynamicControls";
+import FramerDemo from "./FramerDemo/FramerDemo";
 
 function App() {
-  const location = useLocation();
 
   return (
-    <div className="App">
-      <Nav />
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/styled" exact element={<StyledCompEx />} />
-        <Route path="/hovers" exact element={<Hovers />} />
-      </Routes>
+    <div>
+      <FramerDemo/>
     </div>
   );
 }
