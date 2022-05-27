@@ -1,5 +1,5 @@
 import "./App.css";
-import { Home, StyledCompEx } from "./pages";
+import { Home, Hovers, StyledCompEx } from "./pages";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Nav } from "./components";
 import SimpleControls from "./use-animation/SimpleControls";
@@ -10,13 +10,12 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Nav />
+      <Nav />
       <Routes location={location} key={location.pathname}>
-        <Route path="/" exact="exact" element={<Home />} />
-        <Route path="/styled" exact="exact" element={<StyledCompEx />} />
-      </Routes> */}
-      {/* <SimpleControls /> */}
-      <Dynamic />
+        <Route path="/" exact element={<Home />} />
+        <Route path="/styled" exact element={<StyledCompEx />} />
+        <Route path="/hovers" exact element={<Hovers />} />
+      </Routes>
     </div>
   );
 }
