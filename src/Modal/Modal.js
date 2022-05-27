@@ -14,7 +14,7 @@ const modalAnimation = {
 };
 
 const overlayAnimation = {
-  initial: { y: "100%" },
+  initial: { y: "100vh" },
   animate: {
     y: 0,
     transition: { duration: 1.2 },
@@ -74,36 +74,34 @@ export default Modal;
 // ---------------------Styled Components
 
 const ModalContainer = styled(motion.div)`
-  height: 450px;
-  width: 750px;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #cde7f1;
-  position: relative;
-  overflow: hidden;
 `;
 
 const Overlay = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background: #8a3a64;
 `;
 
 const ModalButton = styled(motion.div)`
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   background: #8a3a64;
   border-radius: 50%;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   user-select: none;
   display: flex;
@@ -113,8 +111,8 @@ const ModalButton = styled(motion.div)`
 
 const ModalSample = styled(motion.div)`
   background: #cde7f1;
-  width: 400px;
-  height: 250px;
+  width: 500px;
+  height: 350px;
   border-radius: 10px;
   position: relative;
   color: #edf5e1;
@@ -128,8 +126,8 @@ const ModalSample = styled(motion.div)`
 `;
 
 const Close = styled(motion.div)`
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   background: #8a3a64;
   display: flex;
@@ -138,5 +136,6 @@ const Close = styled(motion.div)`
   cursor: pointer;
   z-index: 100;
   user-select: none;
-  font-size: 16px;
+  font-size: 18px;
+
 `;
