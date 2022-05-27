@@ -1,11 +1,9 @@
 import Drag from "./Animations/Drag/Drag";
 
 const FramerDemo = () => {
-    return (
-        <div>
-            <Drag />
-        </div>
-    )
-}
+  return (
+    <div></div>
+  );
+};
 
 export default FramerDemo;

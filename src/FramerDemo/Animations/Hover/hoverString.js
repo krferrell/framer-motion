@@ -1,4 +1,4 @@
-import React from "react";
+const hoverString = `import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -22,32 +22,35 @@ const Hover = () => {
 
 export default Hover;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div${`
   height: 450px;
   width: 750px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
+};
 
-const Circle = styled(motion.div)`
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+const Circle = styled(motion.div)${`
+height: 100px;
+width: 100px;
+border-radius: 50%;
 
-  background-color: #bfa9a9;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-`;
+background-color: #bfa9a9;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+`};
 
-const Marker = styled.div`
+const Marker = styled.div${`
   height: 20px;
   width: 20px;
   border-radius: 50%;
   margin: 15px;
 
   background-color: #b1cece;
-`;
+`
+};
+`

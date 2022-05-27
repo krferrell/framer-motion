@@ -1,3 +1,4 @@
+export const navString = `
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
@@ -61,16 +62,16 @@ const Svg = () => {
   );
 };
 
-const MainContainer = styled.div`
+const MainContainer = styled.div${`
   height: 450px;
   width: 750px;
   background: #cde7f1;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`};
 
-const SvgContainer = styled(motion.svg)`
+const SvgContainer = styled(motion.svg)${`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,6 +83,7 @@ const SvgContainer = styled(motion.svg)`
     stroke-linecap: round;
     fill: transparent;
   }
-`;
+`};
 
 export default Svg;
+`
