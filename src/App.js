@@ -2,6 +2,8 @@ import "./App.css";
 import { Home, Hovers, StyledCompEx } from "./pages";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Nav } from "./components";
+import SimpleControls from "./use-animation/SimpleControls";
+import { Dynamic, NonDynamic } from "./use-animation/DynamicControls";
 
 function App() {
   const location = useLocation();
