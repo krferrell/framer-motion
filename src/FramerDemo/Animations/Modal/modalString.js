@@ -1,3 +1,4 @@
+const modalString = `
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
@@ -73,7 +74,7 @@ export default Modal;
 
 // ---------------------Styled Components
 
-const ModalContainer = styled(motion.div)`
+const ModalContainer = styled.div${`
   height: 450px;
   width: 750px;
   display: flex;
@@ -81,10 +82,9 @@ const ModalContainer = styled(motion.div)`
   justify-content: center;
   background: #cde7f1;
   position: relative;
-  overflow: hidden;
-`;
+`};
 
-const Overlay = styled(motion.div)`
+const Overlay = styled.div${`
   position: absolute;
   top: 0;
   left: 0;
@@ -95,9 +95,9 @@ const Overlay = styled(motion.div)`
   height: 100%;
   width: 100%;
   background: #8a3a64;
-`;
+`};
 
-const ModalButton = styled(motion.div)`
+const ModalButton = styled.div${`
   width: 130px;
   height: 130px;
   background: #8a3a64;
@@ -109,9 +109,9 @@ const ModalButton = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`};
 
-const ModalSample = styled(motion.div)`
+const ModalSample = styled.div${`
   background: #cde7f1;
   width: 400px;
   height: 250px;
@@ -125,9 +125,9 @@ const ModalSample = styled(motion.div)`
   user-select: none;
   text-align: center;
   overflow: hidden;
-`;
+`};
 
-const Close = styled(motion.div)`
+const Close = styled.div${`
   height: 130px;
   width: 130px;
   border-radius: 50%;
@@ -139,4 +139,5 @@ const Close = styled(motion.div)`
   z-index: 100;
   user-select: none;
   font-size: 16px;
-`;
+`};
+`
