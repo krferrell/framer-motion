@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+export const dragString = `import React, { useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
@@ -21,16 +21,16 @@ const Drag = () => {
 
 export default Drag;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div${`
   height: 450px;
   width: 750px;
   background-color: #D0E6F1;
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`};
 
-const Ball = styled(motion.div)`
+const Ball = styled(motion.div)${`
   background-color: #853064;
   height: 100px;
   width: 100px;
@@ -40,4 +40,4 @@ const Ball = styled(motion.div)`
   align-items: center;
   color: white;
   cursor: grabbing;
-`;
+`};`;
