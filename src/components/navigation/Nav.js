@@ -13,8 +13,8 @@ const Nav = () => {
         <span>Styled Component Example</span>
       </Link>
 
-      <Link to="svg" exact>
-        <span>SVG Example</span>
+      <Link to="hovers" exact>
+        <span>Hovers</span>
       </Link>
     </NavBar>
   );
