@@ -62,8 +62,8 @@ const Svg = () => {
 };
 
 const MainContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 450px;
+  width: 750px;
   background: #cde7f1;
   display: flex;
   justify-content: center;
