@@ -24,7 +24,6 @@ export default Drag;
 const Wrapper = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #D0E6F1;
   display: flex;
   justify-content: center;
   align-items: center;

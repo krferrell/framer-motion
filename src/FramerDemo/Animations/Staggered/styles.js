@@ -8,7 +8,6 @@ export const Container = styled.section`
   align-items: center;
   width: 100%;
   height: 100%;
-  background: #c7e8f3;
 `;
 
 export const StaggerObject = styled(motion.div)`

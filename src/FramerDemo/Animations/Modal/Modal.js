@@ -79,7 +79,6 @@ const ModalContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #cde7f1;
   position: relative;
   overflow: hidden;
 `;
