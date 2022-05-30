@@ -14,43 +14,20 @@ const draw = {
   },
 };
 
-const Svg = () => {
+ const Svg = () => {
   return (
     <MainContainer>
       <SvgContainer
-        width="600"
-        height="200"
+        width="100%"
+        height="auto"
         viewBox="0 0 600 200"
         initial="hidden"
         animate="visible"
       >
-        <motion.circle
-          cx="100"
-          cy="100"
-          r="80"
-          stroke="#8A3A64"
-          variants={draw}
-        />
-        <motion.line
-          x1="220"
-          y1="30"
-          x2="360"
-          y2="170"
-          stroke="#8A3A64"
-          variants={draw}
-        />
-        <motion.line
-          x1="220"
-          y1="170"
-          x2="360"
-          y2="30"
-          stroke="#8A3A64"
-          variants={draw}
-        />
         <motion.rect
-          width="140"
-          height="140"
-          x="410"
+          width="140px"
+          height="140px"
+          x="235"
           y="30"
           rx="20"
           stroke="#8A3A64"
@@ -62,8 +39,8 @@ const Svg = () => {
 };
 
 const MainContainer = styled.div`
-  height: 450px;
-  width: 750px;
+  height: 100%;
+  width: 100%;
   background: #cde7f1;
   display: flex;
   justify-content: center;

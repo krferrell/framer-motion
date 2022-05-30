@@ -1,10 +1,11 @@
 import Svg from "./SVG/SVG"
-import { svgString } from "./SVG/svgString"
+import { navString } from "./SVG/svgString"
 
-const animations = [
+export const animations = [
     {
         name: `SVG`,
-        component: Svg,
-        codeblockString: svgString,
+        comp: Svg,
+        codeblockString: navString,
     },
+
 ]
