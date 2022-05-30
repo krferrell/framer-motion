@@ -25,9 +25,9 @@ const draw = {
         animate="visible"
       >
         <motion.rect
-          width="140px"
-          height="140px"
-          x="235"
+          width="100px"
+          height="100px"
+          x="255"
           y="30"
           rx="20"
           stroke="#8A3A64"

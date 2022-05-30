@@ -1,4 +1,4 @@
-const hoverString = `import React from "react";
+export const hoverString = `import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 

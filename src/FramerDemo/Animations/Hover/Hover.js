@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { colors } from "../../utils/colors";
 
 const spinUp = {
   whileHover: {
@@ -23,9 +24,8 @@ const Hover = () => {
 export default Hover;
 
 const Wrapper = styled.div`
-  height: 450px;
-  width: 750px;
-
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,12 +35,12 @@ const Circle = styled(motion.div)`
   height: 100px;
   width: 100px;
   border-radius: 50%;
-
-  background-color: #bfa9a9;
+  background: ${colors.animateSecondary};
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 `;
 
 const Marker = styled.div`
@@ -48,6 +48,5 @@ const Marker = styled.div`
   width: 20px;
   border-radius: 50%;
   margin: 15px;
-
-  background-color: #b1cece;
+  background: ${colors.animateBase};
 `;

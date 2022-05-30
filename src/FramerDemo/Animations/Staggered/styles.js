@@ -6,14 +6,14 @@ export const Container = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 750px;
-  height: 450px;
+  width: 100%;
+  height: 100%;
   background: #c7e8f3;
 `;
 
 export const StaggerObject = styled(motion.div)`
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   background: #8e4162;
 

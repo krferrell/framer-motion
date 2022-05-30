@@ -1,4 +1,4 @@
-export const staggedCodeBlockString = `
+export const staggeredString = `
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import styled from "styled-components";
