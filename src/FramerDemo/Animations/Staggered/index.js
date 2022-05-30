@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
 import { useAnimation } from "framer-motion";
 
-import { Container, StaggerObject } from "./styles";
+import { Container, StaggerObject, RefreshBtn, RefreshText } from "./styles";
 import { staggerObjectVariants } from "./variants";
 
+
 const Staggered = () => {
-  const controls = useAnimation();
+  const control = useAnimation();
 
   // Run animation once the page loads (hence the empty depedency `[]`).
   useEffect(() => {
-    controls.start((custom) => ({
+    control.start((custom) => ({
       opacity: 1,
       x: 0,
       transition: {
@@ -26,12 +27,15 @@ const Staggered = () => {
       {[...Array(3).keys()].map((_, index) => (
         <StaggerObject
           key={index}
-          animate={controls}
+          animate={control}
           custom={index}
           initial="hidden"
-          variants={staggerObjectVariants}
+          variants={staggerObjectVariants(index)}
         />
       ))}
+    <RefreshBtn onClick={() => control.start('visible')}>
+      <RefreshText>CLICK</RefreshText>
+    </RefreshBtn>
     </Container>
   );
 };
