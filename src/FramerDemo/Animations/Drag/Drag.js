@@ -6,7 +6,7 @@ const Drag = () => {
   const constraintRef = useRef(null);
 
   return (
-    <Wrapper ref={constraintRef}>
+    <Wrapper ref={constraintRef} id="Drag">
       <Ball
         drag
         whileDrag={{ fontSize: "20px" }}

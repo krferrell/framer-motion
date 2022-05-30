@@ -5,8 +5,8 @@ import { MainContainer } from "./styles";
 const AnimationGrid = () => {
     
   const renderCards = () => {
-    return animations.map((animationProfile) => {
-      return <Cards animationComp={animationProfile.comp} />;
+    return animations.map((animationProfile, index) => {
+      return <Cards key={index} id={`${animationProfile.name}`} animationComp={animationProfile.comp} />;
     });
   };
 
