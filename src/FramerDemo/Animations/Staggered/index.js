@@ -23,7 +23,7 @@ const Staggered = () => {
 
   return (
     <Container>
-      {[...Array(5).keys()].map((_, index) => (
+      {[...Array(3).keys()].map((_, index) => (
         <StaggerObject
           key={index}
           animate={controls}

@@ -1,9 +1,16 @@
+import { animations } from "../../Animations";
+import Cards from "./Cards/Cards";
 import { MainContainer } from "./styles";
 
 const AnimationGrid = () => {
-    return <MainContainer>
+    
+  const renderCards = () => {
+    return animations.map((animationProfile) => {
+      return <Cards animationComp={animationProfile.comp} />;
+    });
+  };
 
-    </MainContainer>
-}
+  return <MainContainer>{renderCards()}</MainContainer>;
+};
 
 export default AnimationGrid;

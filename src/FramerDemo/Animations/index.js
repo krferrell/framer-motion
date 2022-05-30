@@ -1,10 +1,47 @@
 import Svg from "./SVG/SVG"
-import { svgString } from "./SVG/svgString"
+import { navString } from "./SVG/svgString"
 
-const animations = [
+import Drag from "./Drag/Drag"
+import { dragString } from "./Drag/dragString"
+
+import Hover from "./Hover/Hover"
+import { hoverString } from "./Hover/hoverString";
+
+import Staggered from "./Staggered"
+import { staggeredString } from "./Staggered/staggeredString"
+
+import Modal from "./Modal/Modal";
+import {modalString} from "./Modal/modalString";
+
+export const animations = [
     {
         name: `SVG`,
-        component: Svg,
-        codeblockString: svgString,
+        comp: Svg,
+        codeblockString: navString,
     },
+
+    {
+        name: `Drag`,
+        comp: Drag,
+        codeblockString: dragString,
+    },
+
+    {
+        name: `Hover`,
+        comp: Hover,
+        codeblockString: hoverString,
+    },
+
+    {
+        name: `Staggered`,
+        comp: Staggered,
+        codeblockString: staggeredString,
+    },
+
+    {
+        name: `Modal`,
+        comp: Modal,
+        codeblockString: modalString,
+    },
+
 ]

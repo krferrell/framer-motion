@@ -48,7 +48,7 @@ const Modal = () => {
   };
   return (
     <ModalContainer>
-      <ModalButton onClick={() => setActive(true)}>CLICK ME</ModalButton>
+      <ModalButton onClick={() => setActive(true)}>OPEN</ModalButton>
       <AnimatePresence>
         {active && (
           <Overlay key="modal" {...overlayAnimation}>
@@ -59,7 +59,7 @@ const Modal = () => {
                   clickHandler();
                 }}
               >
-                CLOSE MODAL
+                CLOSE
               </Close>
             </ModalSample>
           </Overlay>
@@ -74,12 +74,11 @@ export default Modal;
 // ---------------------Styled Components
 
 const ModalContainer = styled(motion.div)`
-  height: 450px;
-  width: 750px;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #cde7f1;
   position: relative;
   overflow: hidden;
 `;
@@ -98,12 +97,12 @@ const Overlay = styled(motion.div)`
 `;
 
 const ModalButton = styled(motion.div)`
-  width: 130px;
-  height: 130px;
+  height: 100px;
+  width: 100px;
   background: #8a3a64;
   border-radius: 50%;
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   user-select: none;
   display: flex;
@@ -128,8 +127,8 @@ const ModalSample = styled(motion.div)`
 `;
 
 const Close = styled(motion.div)`
-  height: 130px;
-  width: 130px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   background: #8a3a64;
   display: flex;
@@ -138,5 +137,5 @@ const Close = styled(motion.div)`
   cursor: pointer;
   z-index: 100;
   user-select: none;
-  font-size: 16px;
+  font-size: 14px;
 `;

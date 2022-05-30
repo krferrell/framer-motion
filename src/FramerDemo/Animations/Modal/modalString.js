@@ -1,4 +1,4 @@
-const modalString = `
+export const modalString = `
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AnimatePresence, motion } from "framer-motion";
