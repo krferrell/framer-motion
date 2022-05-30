@@ -1,14 +1,14 @@
 import { animations } from "../../Animations";
 import { MainContainer, NameContainer, LinkNames } from "./styles";
 
-const Sidebar = () => {
+const Sidebar = ({setCurrAnimation}) => {
   const renderNames = () => {
     return animations.map((animationProfile, index) => {
-      return <LinkNames key={index} href={`#${animationProfile.name}`}> {animationProfile.name}</LinkNames>;
+      return <LinkNames key={index} href={`#${animationProfile.name}`} onClick={() => setCurrAnimation(animationProfile)}> {animationProfile.name}</LinkNames>;
      
     });
   };
-  console.log(animations)
+
   return (
     <MainContainer>
       <NameContainer>{renderNames()}</NameContainer>
