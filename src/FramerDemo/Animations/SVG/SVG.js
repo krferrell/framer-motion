@@ -31,7 +31,7 @@ const Svg = () => {
   };
 
   return (
-    <MainContainer>
+    <MainContainer id='SVG'>
       <SvgContainer
         width="100%"
         height="auto"

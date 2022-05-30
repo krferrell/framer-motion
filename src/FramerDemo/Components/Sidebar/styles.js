@@ -14,3 +14,11 @@ export const NameContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
 `;
+
+export const LinkNames = styled.a`
+    display: flex;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+`

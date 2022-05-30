@@ -1,13 +1,14 @@
 import { animations } from "../../Animations";
-import { MainContainer, NameContainer } from "./styles";
+import { MainContainer, NameContainer, LinkNames } from "./styles";
 
 const Sidebar = () => {
   const renderNames = () => {
-    return animations.map((animationProfile) => {
-      return <h1>{animationProfile.name}</h1>;
+    return animations.map((animationProfile, index) => {
+      return <LinkNames key={index} href={`#${animationProfile.name}`}> {animationProfile.name}</LinkNames>;
+     
     });
   };
-
+  console.log(animations)
   return (
     <MainContainer>
       <NameContainer>{renderNames()}</NameContainer>

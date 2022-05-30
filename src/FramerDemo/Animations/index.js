@@ -18,35 +18,30 @@ export const animations = [
         name: `SVG`,
         comp: Svg,
         codeblockString: navString,
-        refresh: true,
     },
 
     {
         name: `Drag`,
         comp: Drag,
         codeblockString: dragString,
-        refresh: false,
     },
 
     {
         name: `Hover`,
         comp: Hover,
         codeblockString: hoverString,
-        refresh: false,
     },
 
     {
         name: `Staggered`,
         comp: Staggered,
         codeblockString: staggeredString,
-        refresh: true,
     },
 
     {
         name: `Modal`,
         comp: Modal,
         codeblockString: modalString,
-        refresh: false,
     },
 
 ]

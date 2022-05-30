@@ -1,4 +1,4 @@
-.name-tag{
+.name-tag {
   height: 100px;
   width: 100px;
   background-color: aqua;
@@ -6,7 +6,7 @@
   margin: 15px;
 }
 
-.App{
+.App {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,6 +34,10 @@ blockquote,
 dl,
 dd {
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

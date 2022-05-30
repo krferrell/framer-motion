@@ -47,7 +47,7 @@ const Modal = () => {
     setActive(!active);
   };
   return (
-    <ModalContainer>
+    <ModalContainer id="Modal">
       <ModalButton onClick={() => setActive(true)}>OPEN</ModalButton>
       <AnimatePresence>
         {active && (

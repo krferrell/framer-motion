@@ -23,7 +23,7 @@ const Staggered = () => {
   }, []);
 
   return (
-    <Container>
+    <Container id='Staggered'>
       {[...Array(3).keys()].map((_, index) => (
         <StaggerObject
           key={index}
