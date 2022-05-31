@@ -7,10 +7,16 @@ export const CodeBlock = (props) => {
     initial: {
       opacity: 0,
     },
-    animate: {
+    fadeIn: {
       opacity: 1,
       transition: {
-        duration: 3.0,
+        duration: 1.0,
+      },
+    },
+    fadeOut: {
+      opacity: 0,
+      transition: {
+        duration: 0.01,
       },
     },
   };
@@ -18,13 +24,17 @@ export const CodeBlock = (props) => {
   const controls = useAnimation();
 
   useEffect(() => {
-    console.log(props.currentAnimationString);
-    controls.start({
-      opacity: 1,
-      transition: {
-        duration: 1.0,
-      },
-    });
+    controls.start("fadeIn");
+  }, []);
+
+  useEffect(() => {
+    async function fadeOutIn() {
+      console.log(props.currentAnimationString);
+      // fade out and then fadein variant
+      await controls.start("fadeOut");
+      await controls.start("fadeIn");
+    }
+    fadeOutIn();
   }, [props.currentAnimationString]);
 
   return (
