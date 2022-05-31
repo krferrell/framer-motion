@@ -6,6 +6,6 @@ export const MainContainer = styled.div`
     min-height: 100vh;
     background: ${colors.base};
     display: grid;
-    grid-template-columns: 400px 1fr 1fr;
+    grid-template-columns: 200px 1fr 1fr;
     grid-template-rows: 1fr;
 `;

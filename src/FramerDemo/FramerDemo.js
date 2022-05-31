@@ -10,7 +10,7 @@ const FramerDemo = () => {
 
     return (
         <MainContainer>
-            <Sidebar setCurrAnimation={setCurrAnimation}/>
+            <Sidebar setCurrAnimation={setCurrAnimation} currAnimation={currAnimation}/>
             <AnimationGrid/>
             <CodeSnippet currAnimation={currAnimation}/>
         </MainContainer>
