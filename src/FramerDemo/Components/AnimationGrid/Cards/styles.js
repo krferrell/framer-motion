@@ -5,4 +5,7 @@ export const MainContainer = styled.div`
     :not(:first-child) {
         border-top: 2px solid black;
     }
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
 `;
