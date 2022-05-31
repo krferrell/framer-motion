@@ -62,16 +62,18 @@ const Svg = () => {
   );
 };
 
-const MainContainer = styled.div${`
+export default Svg;
+
+const MainContainer = styled.div${`\`
   height: 450px;
   width: 750px;
   background: #cde7f1;
   display: flex;
   justify-content: center;
   align-items: center;
-`};
+\``};
 
-const SvgContainer = styled(motion.svg)${`
+const SvgContainer = styled(motion.svg)${`\`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +85,5 @@ const SvgContainer = styled(motion.svg)${`
     stroke-linecap: round;
     fill: transparent;
   }
-`};
-
-export default Svg;
+\``};
 `
