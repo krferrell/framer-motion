@@ -35,7 +35,7 @@ export const LogoContainer = styled.div`
     width: 200px;
     background-image: url(${reactoad});
     background-size: 80%;
-    bacground-position: center;
+    background-position: center;
     background-repeat: no-repeat;
     position: absolute;
     top: 0;
@@ -70,7 +70,7 @@ export const UnderLine = styled.div`
   transform-origin: left;
   transition: scaleX 0.7 ease;
   animation-name: ${(props) =>
-    props.showIndicator && props.name === props.id ? lineGrow : lineShrink};
+    props.showIndicator && props.name === props.indicator ? lineGrow : lineShrink};
   animation-duration: 0.7s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;

@@ -28,7 +28,7 @@ const Sidebar = ({
             {animationProfile.name}
           </LinkNames>
           <UnderLine
-            id={animationProfile.name}
+            indicator={animationProfile.name}
             name={currAnimation.name}
             showIndicator={showIndicator}
           />
