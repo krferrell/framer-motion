@@ -29,7 +29,6 @@ export const CodeBlock = (props) => {
 
   useEffect(() => {
     async function fadeOutIn() {
-      console.log(props.currentAnimationString);
       // fade out and then fadein variant
       await controls.start("fadeOut");
       await controls.start("fadeIn");
