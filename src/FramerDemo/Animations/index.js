@@ -13,6 +13,9 @@ import { staggeredString } from "./Staggered/staggeredString"
 import Modal from "./Modal/Modal";
 import {modalString} from "./Modal/modalString";
 
+import Toggle from "./Toggle/Toggle"
+import { toggleString } from "./Toggle/toggleString"
+
 export const animations = [
     {
         name: `SVG`,
@@ -42,6 +45,11 @@ export const animations = [
         name: `Modal`,
         comp: Modal,
         codeblockString: modalString,
+    },
+    {
+        name: `Toggle`,
+        comp: Toggle,
+        codeblockString: toggleString,
     },
 
 ]
