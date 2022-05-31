@@ -9,31 +9,29 @@ import {
   LogoContainer,
 } from "./styles";
 
-const Sidebar = ({ setCurrAnimation, currAnimation }) => {
-
-  const [showIndicator, setShowIndicator] = useState(false);
-
-
+const Sidebar = ({
+  setCurrAnimation,
+  currAnimation,
+  showIndicator,
+  setShowIndicator,
+}) => {
   const renderNames = () => {
-
-    return animations.map((animationProfile, index) => {  
-
+    return animations.map((animationProfile, index) => {
       const clickAction = () => {
         setCurrAnimation(animationProfile);
         setShowIndicator(true);
-      }
+      };
 
       return (
-        <LinkContainer>
-          <LinkNames
-            key={index}
-            href={`#${animationProfile.name}`}
-            onClick={clickAction}
-          >
-            {" "}
+        <LinkContainer key={index}>
+          <LinkNames href={`#${animationProfile.name}`} onClick={clickAction}>
             {animationProfile.name}
           </LinkNames>
-          <UnderLine id={animationProfile.name} name={currAnimation.name} showIndicator={showIndicator}/>
+          <UnderLine
+            id={animationProfile.name}
+            name={currAnimation.name}
+            showIndicator={showIndicator}
+          />
         </LinkContainer>
       );
     });
@@ -41,7 +39,7 @@ const Sidebar = ({ setCurrAnimation, currAnimation }) => {
 
   return (
     <MainContainer>
-      <LogoContainer/>
+      <LogoContainer />
       <NameContainer>{renderNames()}</NameContainer>
     </MainContainer>
   );

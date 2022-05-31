@@ -12,7 +12,8 @@ const Drag = () => {
         whileDrag={{ fontSize: "20px" }}
         dragConstraints={constraintRef}
         dragElastic={0}
-        dragMomentum={false}>
+        dragMomentum={false}
+      >
         DRAG
       </Ball>
     </Wrapper>
@@ -27,6 +28,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  position: relative;
 `;
 
 const Ball = styled(motion.div)`
