@@ -33,16 +33,16 @@ const Toggle = () => {
 
 export default Toggle;
 
-const MainContainer = styled.div"
+const MainContainer = styled.div${`\`
   width: 100%;
   height: 100%;
   background: #cfe6f2;
   display: flex;
   justify-content: center;
   align-items: center;
-";
+\``};
 
-const SwitchContainer = styled.div"
+const SwitchContainer = styled.div${`\`
   width: 300px;
   height: 150px;
   border-radius: 20px;
@@ -52,12 +52,12 @@ const SwitchContainer = styled.div"
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
-";
+\``};
 
-const Switch = styled(motion.div)"
+const Switch = styled(motion.div)${`\`
   height: 100%;
   width: 50%;
   border-radius: 50%;
   background: #cfe6f2;
-";
+\``};
 `;

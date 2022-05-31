@@ -22,7 +22,7 @@ const Toggle = () => {
   };
 
   return (
-    <MainContainer>
+    <MainContainer id='Toggle'>
       <SwitchContainer onClick={animationToggle}>
         <Switch {...switchVariant} />
       </SwitchContainer>

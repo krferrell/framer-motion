@@ -26,7 +26,6 @@ export default Hover;
 const Wrapper = styled.div${`\`
   height: 450px;
   width: 750px;
-
   display: flex;
   justify-content: center;
   align-items: center;
