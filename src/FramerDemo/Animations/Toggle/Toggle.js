@@ -38,6 +38,7 @@ const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   z-index: 10;
 `;
 
