@@ -42,7 +42,9 @@ const Staggered = () => {
   );
 };
 
-const Container = styled.section${`
+export default Staggered;
+
+const Container = styled.section${`\`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,9 +52,9 @@ const Container = styled.section${`
   width: 750px;
   height: 450px;
   background: #c7e8f3;
-`};
+\``};
 
-const StaggerObject = styled(motion.div)${`
+const StaggerObject = styled(motion.div)${`\`
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -61,7 +63,5 @@ const StaggerObject = styled(motion.div)${`
   :not(:last-child) {
     margin-bottom: 20px;
   }
-`};
-
-export default Staggered;
-`;
+\``};
+`

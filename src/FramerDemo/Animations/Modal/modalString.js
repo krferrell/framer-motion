@@ -74,7 +74,7 @@ export default Modal;
 
 // ---------------------Styled Components
 
-const ModalContainer = styled.div${`
+const ModalContainer = styled.(motion.div)${`\`
   height: 450px;
   width: 750px;
   display: flex;
@@ -82,9 +82,9 @@ const ModalContainer = styled.div${`
   justify-content: center;
   background: #cde7f1;
   position: relative;
-`};
+\``};
 
-const Overlay = styled.div${`
+const Overlay = styled.(motion.div)${`\`
   position: absolute;
   top: 0;
   left: 0;
@@ -95,9 +95,9 @@ const Overlay = styled.div${`
   height: 100%;
   width: 100%;
   background: #8a3a64;
-`};
+\``};
 
-const ModalButton = styled.div${`
+const ModalButton = styled(motion.div)${`\`
   width: 130px;
   height: 130px;
   background: #8a3a64;
@@ -109,9 +109,9 @@ const ModalButton = styled.div${`
   display: flex;
   justify-content: center;
   align-items: center;
-`};
+\``};
 
-const ModalSample = styled.div${`
+const ModalSample = styled(motion.div)${`\`
   background: #cde7f1;
   width: 400px;
   height: 250px;
@@ -125,9 +125,9 @@ const ModalSample = styled.div${`
   user-select: none;
   text-align: center;
   overflow: hidden;
-`};
+\``};
 
-const Close = styled.div${`
+const Close = styled(motion.div)${`\`
   height: 130px;
   width: 130px;
   border-radius: 50%;
@@ -139,5 +139,5 @@ const Close = styled.div${`
   z-index: 100;
   user-select: none;
   font-size: 16px;
-`};
+\``};
 `
