@@ -34,7 +34,7 @@ export const CodeBlock = (props) => {
       await controls.start("fadeIn");
     }
     fadeOutIn();
-  }, [props.currentAnimationString]);
+  }, [props.currentAnimationString, props.currAnimation]);
 
   return (
     <div style={{ width: "100%", height: "100%", overflowY: "scroll" }}>
