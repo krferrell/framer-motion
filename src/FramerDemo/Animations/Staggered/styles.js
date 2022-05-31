@@ -10,6 +10,8 @@ export const Container = styled.section`
   width: 100%;
   height: 100%;
   position: relative;
+  z-index: 10;
+  position: relative;
 `;
 
 export const StaggerObject = styled(motion.div)`
