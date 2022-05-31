@@ -22,7 +22,7 @@ A website for the presentation held at [Bitwise Industries](https://bitwiseindus
 
 ## 🔥 Demo
 
-You can see a demo of the portfolio project on the [production site](https://tonyanimate.com/).
+You can see a demo of the project on the [production site](https://tonyanimate.com/).
 
 ## 📌 Project Requirements
 
