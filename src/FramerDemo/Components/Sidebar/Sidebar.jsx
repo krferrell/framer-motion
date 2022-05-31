@@ -7,6 +7,8 @@ import {
   LinkContainer,
   UnderLine,
   LogoContainer,
+  IconContainer,
+  IconLink,
 } from "./styles";
 
 const Sidebar = ({
@@ -41,6 +43,12 @@ const Sidebar = ({
     <MainContainer>
       <LogoContainer />
       <NameContainer>{renderNames()}</NameContainer>
+      <IconContainer
+        href="https://github.com/krferrell/framer-motion"
+        target="_blank"
+      >
+        <IconLink />
+      </IconContainer>
     </MainContainer>
   );
 };
