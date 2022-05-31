@@ -1,3 +1,4 @@
+export const toggleString = `
 import { useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
@@ -32,18 +33,18 @@ const Toggle = () => {
 
 export default Toggle;
 
-const MainContainer = styled.div`
+const MainContainer = styled.div"
   width: 100%;
   height: 100%;
+  background: #cfe6f2;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
-`;
+";
 
-const SwitchContainer = styled.div`
-  width: 175px;
-  height: 100px;
+const SwitchContainer = styled.div"
+  width: 300px;
+  height: 150px;
   border-radius: 20px;
   overflow: hidden;
   background: #853064;
@@ -51,12 +52,12 @@ const SwitchContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  cursor: pointer;
-`;
+";
 
-const Switch = styled(motion.div)`
+const Switch = styled(motion.div)"
   height: 100%;
   width: 50%;
   border-radius: 50%;
   background: #cfe6f2;
+";
 `;
