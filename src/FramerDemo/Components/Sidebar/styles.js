@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import reactoad from "./assets/reactoad.png";
+import { VscGithubInverted } from "react-icons/vsc";
+
 
 const lineGrow = keyframes`
     0%{
@@ -76,3 +78,19 @@ export const UnderLine = styled.div`
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 `;
+
+export const IconContainer = styled.a`
+  display: flex;
+  justify-content: center;
+`
+
+export const IconLink = styled(VscGithubInverted)`
+  color: white;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  margin-bottom: 30px;
+`
+
