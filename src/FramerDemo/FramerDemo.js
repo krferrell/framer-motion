@@ -5,16 +5,25 @@ import AnimationGrid from "./Components/AnimationGrid/AnimationGrid";
 import CodeSnippet from "./Components/CodeSnippet/CodeSnippet";
 
 const FramerDemo = () => {
+  const [currAnimation, setCurrAnimation] = useState("");
+  const [showIndicator, setShowIndicator] = useState(false);
 
-    const [currAnimation, setCurrAnimation] = useState('');
-
-    return (
-        <MainContainer>
-            <Sidebar setCurrAnimation={setCurrAnimation} currAnimation={currAnimation}/>
-            <AnimationGrid/>
-            <CodeSnippet currAnimation={currAnimation}/>
-        </MainContainer>
-    )
-}
+  return (
+    <MainContainer>
+      <Sidebar
+        setCurrAnimation={setCurrAnimation}
+        currAnimation={currAnimation}
+        showIndicator={showIndicator}
+        setShowIndicator={setShowIndicator}
+      />
+      <AnimationGrid
+        setShowIndicator={setShowIndicator}
+        setCurrAnimation={setCurrAnimation}
+        currAnimation={currAnimation}
+      />
+      <CodeSnippet currAnimation={currAnimation} />
+    </MainContainer>
+  );
+};
 
 export default FramerDemo;
