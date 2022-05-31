@@ -20,10 +20,9 @@ A website for the presentation held at [Bitwise Industries](https://bitwiseindus
 
 ![Framer presentation website screenshot](https://user-images.githubusercontent.com/29642735/171270036-f6024fe6-6a7f-491f-a70f-a1a6f3b4bd39.png)
 
-<!-- UNTIL WE GET THE URL OF THE SITE, THIS WILL BE COMMENTED OUT 😢 -->
-<!-- ## 🔥 Demo -->
+## 🔥 Demo
 
-<!-- You can see a demo of the portfolio project on the [production site](). -->
+You can see a demo of the portfolio project on the [production site](https://tonyanimate.com/).
 
 ## 📌 Project Requirements
 
