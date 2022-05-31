@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import FramerDemo from "./FramerDemo/FramerDemo";
 
 function App() {
+
   return (
-    <div className="App">
-      
+    <div>
+      <FramerDemo/>
     </div>
   );
 }
