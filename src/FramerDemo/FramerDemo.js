@@ -5,8 +5,9 @@ import AnimationGrid from "./Components/AnimationGrid/AnimationGrid";
 import CodeSnippet from "./Components/CodeSnippet/CodeSnippet";
 
 const FramerDemo = () => {
-  const [currAnimation, setCurrAnimation] = useState("");
+  const [currAnimation, setCurrAnimation] = useState({});
   const [showIndicator, setShowIndicator] = useState(false);
+  const [currentAnimationString, setCurrentAnimationString] = useState("");
 
   return (
     <MainContainer>
@@ -20,8 +21,12 @@ const FramerDemo = () => {
         setShowIndicator={setShowIndicator}
         setCurrAnimation={setCurrAnimation}
         currAnimation={currAnimation}
+        setCurrentAnimationString={setCurrentAnimationString}
       />
-      <CodeSnippet currAnimation={currAnimation} />
+      <CodeSnippet
+        currAnimation={currAnimation}
+        currentAnimationString={currentAnimationString}
+      />
     </MainContainer>
   );
 };
