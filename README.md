@@ -22,7 +22,7 @@ A website for the presentation held at [Bitwise Industries](https://bitwiseindus
 
 ## 🔥 Demo
 
-You can see a demo of the project on the [production site](https://tonyanimate.vercel.app/).
+You can see a demo of the project on the [production site](https://reactoad-framer-demo.vercel.app/).
 
 ## 📌 Project Requirements
 

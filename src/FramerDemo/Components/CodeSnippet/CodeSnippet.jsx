@@ -1,10 +1,11 @@
 import { MainContainer } from "./styles";
 import { CodeBlock } from "../Reusables/Reusables";
 
-const CodeSnippet = ({ currAnimation }) => {
+const CodeSnippet = ({ currAnimation, currentAnimationString }) => {
+
   return (
     <MainContainer>
-      <CodeBlock animationString={currAnimation.codeblockString}/>
+     <CodeBlock currentAnimationString={currentAnimationString} animationString={currAnimation.codeblockString} currAnimation={currAnimation} />
     </MainContainer>
   );
 };
