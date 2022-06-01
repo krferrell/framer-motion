@@ -15,6 +15,7 @@ const Cards = ({
   setCurrAnimation,
   setShowIndicator,
   animationProfile,
+  setCurrentAnimationString,
 }) => {
   const [isBackground, setIsBackground] = useState(false);
 
@@ -29,6 +30,7 @@ const Cards = ({
   const clickAction = () => {
     setCurrAnimation(animationProfile);
     setShowIndicator(true);
+    setCurrentAnimationString(animationProfile.name);
   };
 
   useEffect(() => {
