@@ -3,10 +3,16 @@ import { MainContainer } from "./styles";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import AnimationGrid from "./Components/AnimationGrid/AnimationGrid";
 import CodeSnippet from "./Components/CodeSnippet/CodeSnippet";
+import Svg from "./Animations/SVG/SVG";
+import { navString } from "./Animations/SVG/svgString";
 
 const FramerDemo = () => {
-  const [currAnimation, setCurrAnimation] = useState({});
-  const [showIndicator, setShowIndicator] = useState(false);
+  const [currAnimation, setCurrAnimation] = useState({
+    name: `SVG`,
+    comp: Svg,
+    codeblockString: navString,
+  });
+  const [showIndicator, setShowIndicator] = useState(true);
   const [currentAnimationString, setCurrentAnimationString] = useState("");
 
   return (
